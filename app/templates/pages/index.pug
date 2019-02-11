@@ -1,0 +1,19 @@
+extends ../layouts/default
+
+block head
+
+block content
+	include ../blocks/header
+	main.main
+		include ../blocks/ready
+		include ../blocks/slider
+		include ../blocks/products
+		include ../blocks/stock
+		include ../blocks/article-simple
+		include ../blocks/article-notsimple
+		include ../blocks/signup
+	include ../blocks/footer
+
+	+script('common.min')
+	+script('main')
+	+script('select')

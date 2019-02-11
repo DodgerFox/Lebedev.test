@@ -1,0 +1,174 @@
+.slider
+  padding-top 72px
+  &-wrap
+    display flex
+    align-items center
+
+
+    .slick-list
+      margin 0 -30px
+      padding 0 30px
+      padding-bottom 60px
+
+    .slick-dots
+      position absolute
+      width 100%
+      bottom 15px
+      display flex!important
+      justify-content center
+      li
+        margin 0 4px
+        &:hover
+          button
+            background $main
+            border 1px solid $main
+
+        button
+          width 8px
+          height 8px
+          border-radius 50px
+          background-color transparent
+          border 1px solid $mainwhite
+          color transparent
+          overflow hidden
+          t()
+
+        &.slick-active
+          button
+            background-color $main
+            border 1px solid $main
+
+    .slick-arrow
+      position relative
+      background transparent
+      border none
+      color transparent
+      height 32px
+      margin-bottom 40px
+      width 20px
+      t()
+      &:after
+        content ''
+        position absolute
+        width 18px
+        height 2px
+        transform rotate(55deg)
+        background-color $main
+        top 8px
+        left 0
+        t()
+      &:before
+        content ''
+        position absolute
+        width 18px
+        height 2px
+        transform rotate(-55deg)
+        background-color $main
+        top 22px
+        left 0
+        t()
+      &:hover
+        &:before
+          background #08f
+        &:after
+          background #08f
+
+      &.slick-disabled
+        &:before
+          background #F2F5F7
+        &:after
+          background #F2F5F7
+
+    .slick-next
+      right -54px
+      +to-width(1080px)
+        right -10px
+
+    .slick-prev
+      left -54px
+      &:before
+        top 8px
+      &:after
+        top 22px
+
+      +to-width(1080px)
+        left -10px
+
+
+  &-container
+    background white
+    box-shadow 0px 24px 40px rgba(57, 65, 74, 0.1)
+    border-radius 8px
+    height 460px
+    overflow hidden
+
+  &-item
+    width 33.333%
+    padding 0 7px
+    opacity 0
+    t()
+
+    &.slick-active
+      opacity 1
+
+    &__image
+      height 240px
+      width 100%
+      background-color #333
+      background-size cover
+      background-position top center
+
+    &-body
+      padding 18px 32px
+      position relative
+
+    &-button
+      position absolute
+      width 48px
+      height 48px
+      border-radius 50%
+      background-color $main
+      display flex
+      justify-content center
+      align-items center
+      right 32px
+      top -24px
+      cursor pointer
+      t()
+      &:hover
+        box-shadow 0px 24px 40px rgba(57, 65, 74, 0.15)
+
+    &__title
+      font-size 28px
+      line-height 36px
+
+    &-info
+      margin-top 8px
+      display flex
+      align-items center
+      padding-bottom 24px
+
+    &-rate
+      color $maingray
+      font-size 14px
+      line-height 16px
+      margin-right 16px
+
+    &-stars
+      display flex
+
+      span
+        width 4px
+        height 16px
+        border-radius 2px
+        margin-right 4px
+        background $mainwhite
+        &:last-child
+          margin-right 0
+
+        &.colored
+          background $main
+
+    &__text
+      font-size 16px
+      line-height 28px

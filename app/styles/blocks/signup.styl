@@ -1,0 +1,203 @@
+.signup
+  padding-bottom 75px
+  &-body
+    display flex
+    justify-content space-between
+
+  &-selects
+    float left
+    display flex
+    flex-direction column
+    width 50%
+
+    .signup-form__wrap
+      width 100%
+      padding-left 0!important
+
+  &-options
+    float left
+    padding-left 16px
+
+  &-form
+    width 100%
+    max-width 512px
+    &__wrap
+      margin-top 24px
+      width 50%
+      float left
+      position relative
+      &:nth-child(even)
+        padding-left 16px
+        span
+          left 16px
+        label
+          left 16px!important
+
+      input
+        border 0
+        border-bottom 1px solid #0088FF
+        padding-bottom 6px
+        width 100%
+        padding-top 14px
+        +placeholder()
+          color transparent
+
+        &:focus
+          border-bottom 1px solid $main
+
+        &:focus + span
+          font-size 10px
+          color $maingray
+          top 0
+
+        &:not(:placeholder-shown) + span
+          font-size 10px
+          color $maingray
+          top 0
+
+
+
+      span
+        position absolute
+        pointer-events none
+        top 14px
+        left 0
+        color $mainblack
+        t()
+        &.active
+          font-size 10px
+          color $maingray
+          top 0
+
+      label
+        &.error
+          color #D82E2E
+          font-size 10px
+          line-height 12px
+          position absolute
+          bottom -14px
+          left 0
+
+
+
+    &__button
+      margin-top 32px
+      font-size 20px
+      line-height 20px
+      float left
+      height 48px
+      width 100%
+      background-color $main
+      color white
+      display flex
+      align-items center
+      justify-content center
+      border none
+      t()
+      &:hover
+        background-color $hover
+
+      &:active
+        background-color $active
+
+    &__message
+      color #D82E2E
+      font-size 10px
+      line-height 12px
+      position absolute
+      bottom -14px
+      left 16px
+      &.yellow
+        color #FFB647
+
+      &.green
+        color #15A479
+
+
+  &-content
+    display flex
+    flex-direction column
+    align-items flex-end
+    p
+      color $maingray
+      line-height 24px
+      font-size 14px
+      max-width 380px
+      margin-top 10px
+      margin-right 50px
+
+  &-options
+    padding-top 18px
+    &__item
+      display flex
+      align-items center
+      font-size 10px
+      color $maingray
+      margin-bottom 4px
+
+      &.active
+        svg
+          fill #15A479
+
+      p
+        margin-left 7px
+
+  &-radio
+    float left
+    width 100%
+    display flex
+    margin-top 32px
+    padding-top 24px
+    position relative
+
+    span
+      position absolute
+      top 0
+      left 0
+      font-size 12px
+      color #8A94A6
+
+    input
+    	position: absolute
+    	opacity: 0
+    	visibility: hidden
+    	&:checked + label
+    		color $mainblack
+    		&::after
+    			background $main
+
+      &:disabled + label
+        &:before
+          border 1px solid #E8EAED
+          background #F2F5F7
+        &:after
+          background transparent
+
+    label
+      display flex
+      align-items center
+      height 24px
+      cursor pointer
+      position relative
+      margin-right 22px
+    	t()
+
+    label::before
+    	display: inline-block
+    	content: ""
+    	height 24px
+    	width 24px
+    	margin-right 6px
+    	border: 1px solid $main
+    	border-radius: 50%
+    	t()
+
+    label::after
+      content ''
+      position absolute
+      width 12px
+      height 12px
+      border-radius 50%
+      left 7px
+      top 6px
+      t()

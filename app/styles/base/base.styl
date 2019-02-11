@@ -1,0 +1,113 @@
+body
+	position relative
+	min-width 1024px
+	width 100%
+	color #39414A
+	font-weight 400
+	transition 0.5s all
+	background-color white
+  -webkit-font-smoothing none
+
+
+html
+	font-family SFUIDisplay, sans-serif
+	font-size 62.5%
+	font-size 14px
+	line-height 1.4
+	letter-spacing 0
+	min-width 320px
+	margin-left auto
+	margin-right auto
+
+
+section
+	padding-top 15px
+	padding-bottom 40px
+	transition 1s transform
+
+.section
+
+	&-title
+		font-size 44px
+		line-height 56px
+		padding-bottom 0px
+
+
+	&-text
+		font-size 20px
+		line-height 24px
+		color #8A94A6
+
+
+.wrap
+	position relative
+	padding 0 30px
+	width 100%
+	margin-left auto
+	margin-right auto
+	max-width 1100px
+	+to-width(992px)
+		padding 0 30px
+	+to-width(640px)
+		padding 0 20px
+
+
+
+.main
+	display flex
+	flex-direction column
+	min-height 100vh
+	position relative
+	z-index 2
+
+.next
+	margin-top 60px
+	width 100%
+	display flex
+	justify-content center
+
+	&-button
+		display flex
+		flex-direction column
+		align-items center
+		cursor pointer
+
+		&:hover
+			.next-button__line
+				background #007AF5
+				&:after
+					background #007AF5
+			.next-button__circle
+				border-color #007AF5
+
+		&__text
+			font-size 14px
+			line-height 24px
+
+		&__line
+			height 42px
+			width 1px
+			background #E8EAED
+			border 2px solid white
+			box-sizing content-box
+			position relative
+			z-index 2
+			transition 0.3s all
+			&:after
+				content ''
+				height 3px
+				width 3px
+				border-radius 50px
+				background #E8EAED
+				position absolute
+				bottom 0
+				left -1px
+				transition 0.3s all
+
+		&__circle
+			width 13px
+			height 13px
+			border-radius 50%
+			border 1px solid #E8EAED
+			margin-top -10px
+			transition 0.3s all

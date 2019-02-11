@@ -1,0 +1,215 @@
+.products
+
+  &-good
+    display flex
+    align-items center
+    img
+      margin-right 22px
+
+  &-select
+    height 100%
+    display flex
+    align-items center
+
+  &__total
+    color $mainblack
+    font-size 16px
+    line-height 24px
+
+  &-close
+    position absolute
+    right 0
+    top 0
+    height 100%
+    display flex
+    align-items center
+    img
+      cursor pointer
+      t()
+      &:hover
+        opacity 0.75
+
+  &-item
+    margin-top 12px
+    display flex
+    align-items center
+    justify-content flex-end
+    font-size 20px
+    line-height 24px
+
+    &:first-child
+      margin-top 24px
+
+    &__title
+      color $maingray
+      margin-right 16px
+
+  &-buttons
+    margin-top 32px
+    display flex
+    align-items center
+    justify-content flex-end
+
+    &__continue
+      font-size 12px
+      line-height 12px
+      color $main
+      position relative
+      margin-right 40px
+      cursor pointer
+      t()
+      &:hover
+        transform translateX(-10px)
+      &:before
+        content ''
+        position absolute
+        left -18px
+        top 0px
+        width 5px
+        height 12px
+        background-image url('../images/arrow-cnt.svg')
+
+    &__checkout
+      background $main
+      height 36px
+      width 160px
+      font-size 16px
+      display flex
+      justify-content center
+      align-items center
+      color white
+      cursor pointer
+      t()
+      &:hover
+        background-color $hover
+
+      &:active
+        background-color $active
+
+  &-table
+    width 100%
+    margin-top 40px
+
+    .select
+      width 88px
+      height 42px
+
+    .select-options
+      top 98%
+      background-color white
+      &.color
+        li
+          padding 4px
+      li
+        height 32px
+        &:after
+          content ''
+          left 4px
+          right 4px
+      span
+        width 24px
+        height 24px
+        left -4px
+        top -4px
+        border-radius 1px
+        position relative
+        display block
+
+    .select-styled
+      border 1px solid #E8EAED
+      border-radius 2px
+      display flex
+      align-items center
+      justify-content center
+      height 100%
+      padding 0
+      padding-right 40px
+      font-size 20px
+      line-height 28px
+      transition none
+      span
+        width 32px
+        height 32px
+        border-radius 1px
+        position absolute
+        top 4px
+        left 4px
+      &.active
+        box-shadow 0px 8px 12px rgba(57,65,74,0.1)
+        border-color white
+
+    .select-styled:after
+      right 16px
+      top 18px
+
+    tr
+      border-bottom 1px solid #E8EAED
+      position relative
+
+      td
+        font-size 20px
+        line-height 28px
+        color $mainblack
+        padding 20px 0
+        position relative
+        width 1%
+        &:first-child
+          padding-left 15px
+          padding-right 45px
+
+
+      &:first-child
+        th
+          padding 8px 0
+          text-align left
+          color $maingray
+          font-size 14px
+          line-height 20px
+
+.quantity
+  width 88px
+  height 42px
+  border: 1px solid #E8EAED
+  border-radius 1px
+  position relative
+  display flex
+  justify-content space-between
+  align-items center
+
+  &__item
+    width 30px
+    height 42px
+    position relative
+    cursor pointer
+    &:hover
+      &:after
+        background-color $main
+      &:before
+        background-color $main
+    &.disabled
+      pointer-events none
+      &:after
+        background-color #C4C4C4
+      &:before
+        background-color #C4C4C4
+    &:after
+      content ''
+      position absolute
+      left 10px
+      width 8px
+      height 2px
+      border-radius 4px
+      top 21px
+      background-color $mainblack
+      t()
+    &:last-child
+      &:before
+        content ''
+        position absolute
+        left 13px
+        width 2px
+        height 8px
+        border-radius 4px
+        top 18px
+        background-color $mainblack
+        t()

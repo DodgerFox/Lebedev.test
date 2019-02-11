@@ -1,0 +1,67 @@
+section.signup
+  .wrap
+    
+    h2.section-title Sign up
+    p.section-text Register and share
+    
+    .signup-body
+      
+      form.signup-form(id="form" action="#" method="post" data-validate data-invalid-class="invalid")
+        
+        .signup-form__wrap
+          input#name(type="text" name="username" placeholder="Your name" required )
+          span Your name
+        .signup-form__wrap
+          input#password(type="password" name="password" placeholder="Password" required )
+          span Password
+          .signup-form__message
+        .signup-form__wrap
+          input(type="email" name="email" placeholder="E-mail" required )
+          span E-mail
+        .signup-form__wrap
+          input(type="password" name="confpass" placeholder="Confirm password" required )
+          span Confirm password
+          
+        .signup-selects
+          .signup-form__wrap
+            select(disabled)
+              option Your country
+              option New York
+              option Moscow
+              option Saint Petersburg
+              option Petushki
+          .signup-form__wrap
+            select
+              option Your age
+              option 9
+              option 10
+              option 11
+              option 12
+        
+        .signup-options
+          .signup-options__item
+            svg(width="7" height="6" viewBox="0 0 7 6" fill="#E8EAED" xmlns="http://www.w3.org/2000/svg")
+              path(d="M5.72222 0.609133C5.83004 0.478094 6.01943 0.462919 6.14523 0.575238C6.27103 0.687557 6.2856 0.884838 6.17777 1.01588L2.57777 5.39087C2.46405 5.52908 2.26144 5.53719 2.13787 5.40847L0.337868 3.53347C0.220711 3.41143 0.220711 3.21357 0.337868 3.09153C0.455025 2.96949 0.644974 2.96949 0.762132 3.09153L2.33305 4.72791L5.72222 0.609133Z")
+            p Не менее 6 символов
+          .signup-options__item
+            svg(width="7" height="6" viewBox="0 0 7 6" fill="#E8EAED" xmlns="http://www.w3.org/2000/svg")
+              path(d="M5.72222 0.609133C5.83004 0.478094 6.01943 0.462919 6.14523 0.575238C6.27103 0.687557 6.2856 0.884838 6.17777 1.01588L2.57777 5.39087C2.46405 5.52908 2.26144 5.53719 2.13787 5.40847L0.337868 3.53347C0.220711 3.41143 0.220711 3.21357 0.337868 3.09153C0.455025 2.96949 0.644974 2.96949 0.762132 3.09153L2.33305 4.72791L5.72222 0.609133Z")
+                p Заглавные и строчные буквы
+          .signup-options__item
+            svg(width="7" height="6" viewBox="0 0 7 6" fill="#E8EAED" xmlns="http://www.w3.org/2000/svg")
+              path(d="M5.72222 0.609133C5.83004 0.478094 6.01943 0.462919 6.14523 0.575238C6.27103 0.687557 6.2856 0.884838 6.17777 1.01588L2.57777 5.39087C2.46405 5.52908 2.26144 5.53719 2.13787 5.40847L0.337868 3.53347C0.220711 3.41143 0.220711 3.21357 0.337868 3.09153C0.455025 2.96949 0.644974 2.96949 0.762132 3.09153L2.33305 4.72791L5.72222 0.609133Z")
+            p Цифры и специальные знаки
+        
+        .signup-radio
+            span Gender
+          
+            input#radio1(type="radio" name="gender" checked)
+            label(for="radio1") Male
+            input#radio2(type="radio" name="gender")
+            label(for="radio2") Female
+        
+        input(type="submit" value="Sign up").signup-form__button
+          
+      .signup-content
+        img(src="assets/images/signup.png").signup-content__image
+        p.signup-content__text If we really want to understand how the system works, we have to look at all the players involved. Giant larvaceans are one important group we need to learn more about.

@@ -1,0 +1,95 @@
+section.products
+  .wrap
+    h2.section-title I’d like trrrr & tddd
+    p.section-text <>
+    
+    .products-body
+      table.products-table(align="center")
+        tr
+          th Product
+          th Color
+          th Size
+          th Quantity
+          th Total Price
+        
+        tr
+          td
+            .products-good
+              img(src="assets/images/table-1.png")
+              p Sweater Hooded
+          
+          td
+            .products-select
+              select.color
+                option #F49990
+                option #E1B8A0
+                option #E9D2B2
+                option #9DAEB6
+                option #4D80A1
+          
+          td
+            .products-select
+              select
+                option XS           
+                option S           
+                option M          
+                option L          
+                option XL
+          
+          td
+            .quantity
+              .quantity__item.minus.disabled
+              .quantity__number 1
+              .quantity__item.plus
+          
+          td
+            p.products__total $79.89
+            .products-close
+              img(src="assets/images/close.svg")
+                
+        tr
+          td
+            .products-good
+              img(src="assets/images/table-2.png")
+              p Printed T-Shirt
+          
+          td
+            .products-select
+              select.color
+                option #F49990
+                option #E1B8A0
+                option #E9D2B2
+                option #9DAEB6
+                option #4D80A1
+          
+          td
+            .products-select
+              select
+                option XS           
+                option S           
+                option M          
+                option L          
+                option XL
+          
+          td
+            .quantity
+              .quantity__item.minus.disabled
+              .quantity__number 1
+              .quantity__item.plus
+          
+          td
+            p.products__total $79.89
+            .products-close
+              img(src="assets/images/close.svg")
+      
+      .products-item
+        p.products-item__title Shiping:
+        p.products-item__text $9.99
+      .products-item
+        p.products-item__title Total:
+        p.products-item__text $104.39
+      
+      .products-buttons
+        a(href="#").products-buttons__continue Continue shopping
+        a(href="#").products-buttons__checkout Proceed checkout
+                    
